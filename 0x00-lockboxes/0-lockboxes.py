@@ -12,9 +12,9 @@ def canUnlockAll(boxes):
             if key <= len(boxes) and i in open:
                 open[key] = True
 
-    for x in range(0, len(boxes)):
-        for z in range(0, len(boxes[x])):
-            key = boxes[x][z]
+    for i in range(0, len(boxes)):
+        for j in range(0, len(boxes[i])):
+            key = boxes[i][j]
             if key <= len(boxes) and i in open:
                 open[key] = True
 
@@ -22,9 +22,3 @@ def canUnlockAll(boxes):
         return True
 
     return False
-
-    # print('dict', open)
-    # print('i:', i); print('box[i]:', boxes[i]); print()
-    # print('j:', j); print('box[i][j]: ', boxes[i][j]); print()
-    # print('add:', key)
-    # print(len(boxes))
