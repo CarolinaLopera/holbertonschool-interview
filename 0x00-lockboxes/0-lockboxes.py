@@ -18,6 +18,12 @@ def canUnlockAll(boxes):
             if key <= len(boxes) and i in open:
                 open[key] = True
 
+    for k in range(0, len(boxes)):
+        for l in range(0, len(boxes[k])):
+            key = boxes[k][l]
+            if key <= len(boxes) and i in open:
+                open[key] = True
+
     if (len(open) == len(boxes)):
         return True
 
