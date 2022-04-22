@@ -4,19 +4,19 @@ canUnlockAll = __import__('0-lockboxes').canUnlockAll
 
 boxes = [[1], [2], [3], [4], []]
 print(canUnlockAll(boxes))
-# True, ok
+# 1 True, ok
 
 boxes = [[1, 4, 5], [2], [5, 2], [3], [4, 1], [3, 5]]
 print(canUnlockAll(boxes))
-# True, ok
+# 2 True, ok
 
 boxes = [[4, 6], [2], [0, 4, 1], [3], [], [4, 1], [5, 6]]
 print(canUnlockAll(boxes))
-# False, ok
+# 3 False, ok
 
 boxes = [[0]]
 print(canUnlockAll(boxes))
-# True, ok
+# 4 True, ok
 
 boxes = [
         [36, 37, 55, 26, 92, 24, 23, 23, 88, 86, 85, 43, 36, 4, 87, 66, 95, 18, 68, 30, 49, 63, 30, 33, 14],
@@ -33,7 +33,18 @@ boxes = [
         [38, 26, 18, 51, 44, 71, 85, 99, 87, 8, 32, 32, 51, 40, 79, 34, 77, 37, 28, 57, 26, 67, 83, 81, 24, 83, 22, 4, 45, 13, 79, 19, 93, 78, 16, 16, 62, 15, 6, 87, 23, 19, 65, 22, 45, 41, 27, 65, 49, 71, 99, 55, 19, 97, 100, 34, 88, 95, 27, 38, 24, 72, 16, 57, 54, 12, 80, 52]
     ]
 print(canUnlockAll(boxes))
-# False, ok
+# 5 False, ok
+
+boxes = []
+keys = []
+for n in range(1, 1000):
+    keys = []
+    for m in range(1, 1000):
+        keys.append(m)
+    boxes.append(keys)
+
+print(canUnlockAll(boxes))
+# 6 False, bad
 
 boxes = [
         [10, 3, 8, 9, 6, 5, 8, 1],
@@ -46,7 +57,7 @@ boxes = [
         [9, 5, 8, 8],
         [6, 2, 8, 6]]
 print(canUnlockAll(boxes))
-# False, bad
+# 7 False, bad
 
 boxes = [
         [7, 5],
@@ -60,4 +71,4 @@ boxes = [
         [4, 2, 9, 6, 6, 5, 5],
     ]
 print(canUnlockAll(boxes))
-# True, bad
+# 8 True, bad
