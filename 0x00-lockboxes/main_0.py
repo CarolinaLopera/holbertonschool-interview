@@ -42,7 +42,6 @@ for n in range(1, 1000):
     for m in range(1, 1000):
         keys.append(m)
     boxes.append(keys)
-
 print(canUnlockAll(boxes))
 # 6 False, bad
 

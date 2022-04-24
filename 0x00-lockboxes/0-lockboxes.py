@@ -18,14 +18,14 @@ def canUnlockAll(boxes):
     #             open[key] = True
 
     for i in range(0, len(boxes)):
-        # if (len(boxes[i]) < len(boxes)):
-        for j in boxes[i]:
-            if j <= len(boxes) and i in open.keys():
-                open[j] = True
-                if (j < len(boxes)):
-                    for x in boxes[j]:
-                        if x <= len(boxes) and j in open.keys():
-                            open[x] = True
+        if (len(boxes[i]) < len(boxes)):
+            for j in boxes[i]:
+                if j <= len(boxes) and i in open.keys():
+                    open[j] = True
+                    if (j < len(boxes)):
+                        for x in boxes[j]:
+                            if x <= len(boxes) and j in open.keys():
+                                open[x] = True
 
     if (len(open) == len(boxes)):
         return True
