@@ -11,6 +11,9 @@ int is_palindrome(listint_t **head)
 	listint_t *rev = NULL, *aux = *head;
 	int i = 0;
 
+	if (head == NULL)
+		return (1);
+
 	for (; aux != NULL; i++)
 	{
 		add_nodeint(&rev, aux->n);
@@ -18,8 +21,8 @@ int is_palindrome(listint_t **head)
 	}
 	aux = *head;
 
-	if (i == 0)
-		return (1);
+	// if (i == 0)
+	// 	return (1);
 
 	while (aux != NULL)
 	{
