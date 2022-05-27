@@ -21,9 +21,6 @@ int is_palindrome(listint_t **head)
 	}
 	aux = *head;
 
-	// if (i == 0)
-	// 	return (1);
-
 	while (aux != NULL)
 	{
 		if (rev->n != aux->n)
