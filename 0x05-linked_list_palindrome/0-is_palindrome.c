@@ -28,7 +28,6 @@ int is_palindrome(listint_t **head)
 		rev = rev->next;
 		aux = aux->next;
 	}
-	aux = *head;
 	return (1);
 }
 
