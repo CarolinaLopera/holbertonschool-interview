@@ -1,5 +1,7 @@
 #!/usr/bin/python3
 '''Imports'''
+
+
 import fileinput
 
 
