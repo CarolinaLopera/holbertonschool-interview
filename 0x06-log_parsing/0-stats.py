@@ -14,6 +14,7 @@ try:
         for i in range(len(line)):
             cpy += line[i]
         div = cpy.split()
+        print(div)
         count += 1
         size += int(div[8])
         for key in dict:
