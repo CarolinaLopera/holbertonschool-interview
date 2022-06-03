@@ -3,8 +3,7 @@
 import fileinput
 
 
-count = 0
-size = 0
+count, size = 0, 0
 dict = {'200': 0, '301': 0, '400': 0, '401': 0,
         '403': 0, '404': 0, '405': 0, '500': 0}
 
@@ -14,7 +13,6 @@ try:
         for i in range(len(line)):
             cpy += line[i]
         div = cpy.split()
-        print(div)
         count += 1
         size += int(div[8])
         for key in dict:
