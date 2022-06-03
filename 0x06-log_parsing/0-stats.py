@@ -1,8 +1,6 @@
 #!/usr/bin/python3
 '''script that reads stdin line by line and computes metrics'''
-
-
-import sys
+import fileinput
 
 
 count = 0
@@ -11,7 +9,7 @@ dict = {'200': 0, '301': 0, '400': 0, '401': 0,
         '403': 0, '404': 0, '405': 0, '500': 0}
 
 try:
-    for line in sys.stdin:
+    for line in fileinput.input():
         cpy = ''
         for i in range(len(line)):
             cpy += line[i]
