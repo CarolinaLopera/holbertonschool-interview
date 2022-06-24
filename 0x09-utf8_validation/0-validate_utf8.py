@@ -16,6 +16,8 @@ def validUTF8(data):
                 count += 1
             if count == 0:
                 continue
+            if count == 1 or count > 4:
+                return False
         else:
             if not (binary[0] == '1' and binary[1] == '0'):
                 return False
