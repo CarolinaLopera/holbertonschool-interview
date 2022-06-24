@@ -1,7 +1,9 @@
 #!/usr/bin/python3
+'''Check UTF-8'''
 
 
 def validUTF8(data):
+    '''Return False if the validation fail'''
     count = 0
 
     for i in data:
